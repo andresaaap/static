@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Upload to AWS') {
 			steps {
-				sh 'echo "Hello wolrd"'
+				withAWS(region:'us-east-2', credentials:'AKIAX6QGKHSVK36OX5FQ')
 			}
 		}
 	}
